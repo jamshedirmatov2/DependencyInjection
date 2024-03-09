@@ -1,11 +1,19 @@
 package com.wigroup.dependencyinjection.example1
 
+import javax.inject.Inject
+
 class Activity {
 
-    lateinit var computer: Computer
+    @Inject
     lateinit var keyboard: Keyboard
 
+    @Inject
+    lateinit var monitor: Monitor
+
+    @Inject
+    lateinit var mouse: Mouse
+
     init {
-        Component().inject(this)
+        DaggerComponent.create().inject(this)
     }
 }

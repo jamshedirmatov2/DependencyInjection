@@ -1,21 +1,9 @@
 package com.wigroup.dependencyinjection.example1
 
-class Component {
+import dagger.Component
 
-    private fun getComputer(): Computer {
-        val monitor = Monitor()
-        val keyboard = Keyboard()
-        val mouse = Mouse()
-        val computerTower = ComputerTower(
-            Storage(),
-            Memory(),
-            Processor()
-        )
-        return Computer(monitor, computerTower, keyboard, mouse)
-    }
+@Component
+interface Component {
 
-    fun inject(activity: Activity) {
-        activity.computer = getComputer()
-        activity.keyboard = Keyboard()
-    }
+    fun inject(activity: Activity)
 }
