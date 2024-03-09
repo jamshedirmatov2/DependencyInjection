@@ -1,4 +1,3 @@
 package com.wigroup.dependencyinjection.example1
 
-class Memory {
-}
+class Memory

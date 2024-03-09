@@ -19,8 +19,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         val activity = Activity()
-        println(activity.keyboard)
-        println(activity.monitor)
-        println(activity.mouse)
+        println(activity.computer)
     }
 }
