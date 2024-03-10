@@ -4,9 +4,12 @@ import android.content.Context
 import com.wigroup.dependencyinjection.R
 import javax.inject.Inject
 
-class ExampleDatabase @Inject constructor(private val context: Context) {
+class ExampleDatabase @Inject constructor(
+    private val context: Context,
+    private val timeMillis: Long
+) {
 
     fun method() {
-        println("ExampleDatabase: ${context.getString(R.string.app_name)}")
+        println("ExampleDatabase: ${context.getString(R.string.app_name)} $timeMillis $this")
     }
 }
