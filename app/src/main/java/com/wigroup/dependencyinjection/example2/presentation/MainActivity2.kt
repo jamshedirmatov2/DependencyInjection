@@ -1,8 +1,6 @@
 package com.wigroup.dependencyinjection.example2.presentation
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,7 +10,7 @@ import com.wigroup.dependencyinjection.R
 import com.wigroup.dependencyinjection.example2.ExampleApp
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -42,11 +40,5 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.method()
         viewModel2.method()
-
-        findViewById<TextView>(R.id.tv_hello_world).setOnClickListener {
-            Intent(this, MainActivity2::class.java).apply {
-                startActivity(this)
-            }
-        }
     }
 }
